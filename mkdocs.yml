@@ -1,0 +1,68 @@
+site_name: Football Analytics with Python
+site_description: Python-based football analytics using Statsbomb open data and GPS tracking benchmarks.
+site_author: Stefan Hofmann
+site_url: https://twinanalytics.github.io/football-analytics-blog/
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+
+nav:
+  - Home: index.md
+  - 'Series 1 — Getting Started':
+    - '1.1 The Data': serie-1/1-1-data/index.md
+    - '1.2 Drawing a Pitch': serie-1/1-2-pitch/index.md
+    - '1.3 Shot Maps': serie-1/1-3-shot-maps/index.md
+    - '1.4 Pass Networks': serie-1/1-4-pass-networks/index.md
+    - '1.5 Heatmaps': serie-1/1-5-heatmaps/index.md
+  - 'Series 2 — Tactical Analysis':
+    - '2.1 What Is xG?': serie-2/2-1-xg/index.md
+    - '2.2 Pressing (PPDA)': serie-2/2-2-ppda/index.md
+    - '2.3 Through Balls': serie-2/2-3-through-balls/index.md
+    - '2.4 Freeze Frames': serie-2/2-4-freeze-frames/index.md
+    - '2.5 Carries': serie-2/2-5-carries/index.md
+    - '2.6 360° Data': serie-2/2-6-360/index.md
+  - 'Series 3 — Physical Performance':
+    - 'P.1 GPS Introduction': serie-3/p1-gps-intro/index.md
+    - 'P.2 Sprint Profiles': serie-3/p2-sprints/index.md
+    - 'P.3 Distance Analysis': serie-3/p3-distance/index.md
+    - 'P.4 Accelerations': serie-3/p4-accelerations/index.md
+    - 'P.5 Pressing Space': serie-3/p5-pressing-space/index.md
+  - 'Series 4 — Deep Dives':
+    - '4.1 Messi Career': serie-4/4-1-messi/index.md
+    - '4.2 Barcelona 2015/16': serie-4/4-2-barcelona-1516/index.md
+    - '4.3 Women''s World Cup': serie-4/4-3-wwc/index.md
+    - '4.4 CL Finals': serie-4/4-4-cl-finals/index.md
+    - '4.5 Leverkusen 2023/24': serie-4/4-5-leverkusen/index.md
