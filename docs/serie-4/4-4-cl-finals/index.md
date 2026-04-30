@@ -12,7 +12,7 @@ Each Champions League season in the Statsbomb Open Data represents the final mat
 - Full event data: shots, passes, carries, pressures
 - Match outcomes (score, extra time, penalties where applicable)
 
-This is a small sample by statistical standards — 18 matches — but it is 18 of the most scrutinized matches in football. Even limited data on them is valuable.
+This is a small sample by statistical standards (18 matches), but it is 18 of the most scrutinized matches in football. Even limited data on them is valuable.
 
 ---
 
@@ -22,7 +22,7 @@ This is a small sample by statistical standards — 18 matches — but it is 18 
 
 The chart shows home (first-listed) and away xG for each final. A few patterns emerge:
 
-Some finals were extremely one-sided in xG terms — one team dominated chance creation but may not have converted. Others show close xG totals despite lopsided final scores, suggesting fortune played a role.
+Some finals were extremely one-sided in xG terms: one team dominated chance creation but may not have converted. Others show close xG totals despite lopsided final scores, suggesting fortune played a role.
 
 The aggregate average xG per match across finals is broadly similar to league football. Contrary to the narrative that finals are uniquely cautious affairs, the data suggests chance creation at roughly comparable levels to regular high-stakes matches.
 
@@ -46,7 +46,7 @@ This view answers a question the scoreline cannot: was the result surprising giv
 
 The side-by-side shot maps show each team's shots from the shooter's perspective (normalized so attacks go right). Star markers are goals. Larger circles indicate higher xG shots.
 
-The spatial distribution reveals different attacking strategies. One team may have concentrated shots centrally and from close range. Another may have attempted more from outside the penalty area — either because they could not penetrate, or because their style favored long-range attempts.
+The spatial distribution reveals different attacking strategies. One team may have concentrated shots centrally and from close range. Another may have attempted more from outside the penalty area, either because they could not penetrate or because their style favored long-range attempts.
 
 ---
 
@@ -62,7 +62,7 @@ The stories we tell about these matches deserve to be tested against evidence, e
 
 ---
 
-*Data: Statsbomb Open Data — Champions League finals, multiple seasons.*
+*Data: Statsbomb Open Data, Champions League finals, multiple seasons.*
 
 Full notebook available in the [GitHub repository](https://github.com/TwinAnalytics/football-analytics-blog)
 

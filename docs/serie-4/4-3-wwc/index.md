@@ -1,6 +1,6 @@
 # 4.3 — Women's World Cup: 2019 vs. 2023 in Data
 
-Four years separate two Women's World Cups. The sport grew in that time — more investment, more professional leagues, more players who spent their entire careers in serious competitive environments. But did that growth show up in the data?
+Four years separate two Women's World Cups. The sport grew in that time: more investment, more professional leagues, more players who spent their entire careers in serious competitive environments. But did that growth show up in the data?
 
 ---
 
@@ -8,7 +8,7 @@ Four years separate two Women's World Cups. The sport grew in that time — more
 
 The 2023 Women's World Cup should show measurable signs of tactical and technical development compared to 2019: higher passing tempo, more intense pressing, better chance creation.
 
-The Statsbomb data covers both tournaments completely — 52 matches in 2019, 64 in 2023 (with 360° data available for 2023). This gives us the ability to actually test the thesis.
+The Statsbomb data covers both tournaments completely: 52 matches in 2019, 64 in 2023 (with 360° data available for 2023). This gives us the ability to actually test the thesis.
 
 ---
 
@@ -22,7 +22,7 @@ Four key metrics:
 
 **Shot conversion rate:** 2023 conversion rate was slightly lower despite better xG per match. More high-quality chances were created but converted at a marginally lower rate.
 
-**Passes per match:** The 2023 tournament featured more passes per match — consistent with higher tempo and more structured play.
+**Passes per match:** The 2023 tournament featured more passes per match, consistent with higher tempo and more structured play.
 
 **Total goals:** 2023 had significantly more total goals (2.77 per match vs. 2.24 in 2019). Higher xG + more shots explains a meaningful portion of this.
 
@@ -32,11 +32,11 @@ Four key metrics:
 
 ![WWC xG distribution](figures/wwc_xg_distribution.png)
 
-The xG distribution for individual shots shows the most interesting finding. In 2023, there are more shots at both ends of the distribution — more very low-xG speculative shots, and more high-xG close-range opportunities.
+The xG distribution for individual shots shows the most interesting finding. In 2023, there are more shots at both ends of the distribution: more very low-xG speculative shots, and more high-xG close-range opportunities.
 
 This suggests more open, end-to-end play in 2023. Teams were creating better chances but also conceding more of them. The game opened up.
 
-In 2019, the distribution was more compressed — fewer very-high-xG opportunities, suggesting more organized defenses. The famous USWNT performance in 2019 was built partly on defensive structure that limited opponent chance quality.
+In 2019, the distribution was more compressed, with fewer very-high-xG opportunities, suggesting more organized defenses. The famous USWNT performance in 2019 was built partly on defensive structure that limited opponent chance quality.
 
 ---
 
@@ -58,7 +58,7 @@ This asymmetry will only grow. As Statsbomb collects more 360° data for future 
 
 ---
 
-*Data: Statsbomb Open Data — Women's World Cup 2019 (52 matches) and 2023 (64 matches, including 360° tracking).*
+*Data: Statsbomb Open Data, Women's World Cup 2019 (52 matches) and 2023 (64 matches, including 360° tracking).*
 
 Full notebook available in the [GitHub repository](https://github.com/TwinAnalytics/football-analytics-blog)
 

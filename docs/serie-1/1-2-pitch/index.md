@@ -266,7 +266,7 @@ We have a pitch. Now we need something to put on it. In **Article 1.3** we load 
 
 ---
 
-*Part of **Football Analytics with Python** — a series that takes you from raw Statsbomb data to real tactical analyses.*
+*Part of **Football Analytics with Python**, a series that takes you from raw Statsbomb data to real tactical analyses.*
 
 *Series: [1.1 The Data](../1-1-data/) · **1.2 Drawing a Pitch** · [1.3 Shot Maps](../1-3-shot-maps/) · [1.4 Pass Networks](../1-4-pass-networks/) · [1.5 Heatmaps](../1-5-heatmaps/)*
 

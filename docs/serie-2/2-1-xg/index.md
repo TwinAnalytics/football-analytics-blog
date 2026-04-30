@@ -12,11 +12,11 @@ A shot from six yards out, one-on-one with the goalkeeper, might have an xG of 0
 
 The Statsbomb xG model accounts for:
 
-- **Location** — distance and angle to goal
-- **Body part** — headed shots score less often than foot shots
-- **Shot technique** — volleys, chips, normal strikes
-- **Game situation** — open play, set piece, corner
-- **Preceding action** — was it a through ball? A cross?
+- **Location**: distance and angle to goal
+- **Body part**: headed shots score less often than foot shots
+- **Shot technique**: volleys, chips, normal strikes
+- **Game situation**: open play, set piece, corner
+- **Preceding action**: was it a through ball? A cross?
 
 ---
 
@@ -60,7 +60,7 @@ The white dots are actual goals. Teams where the dot sits far to the right are o
 
 **It measures shot quality, not decision quality.** A player who creates a 0.9 xG chance and misses gets no credit for the underlying work. A player who fires 30-yard efforts all game accumulates almost no xG even if one goes in.
 
-The best use of xG is over large samples — full seasons, career trajectories. As a tool for understanding a single match result, treat it as context, not truth.
+The best use of xG is over large samples: full seasons, career trajectories. As a tool for understanding a single match result, treat it as context, not truth.
 
 ---
 
@@ -80,7 +80,7 @@ team_xg = shots_df.groupby('team')['shot_statsbomb_xg'].sum()
 
 Full notebook available in the [GitHub repository](https://github.com/TwinAnalytics/football-analytics-blog)
 
-*Data: Statsbomb Open Data — La Liga 2015/16, 380 matches.*
+*Data: Statsbomb Open Data, La Liga 2015/16, 380 matches.*
 
 ---
 

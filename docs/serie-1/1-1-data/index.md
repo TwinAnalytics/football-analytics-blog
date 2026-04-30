@@ -345,12 +345,12 @@ Most passes are short. Under 20 units. The long tail covers switches of play and
 
 ## What We've Covered
 
-• **Data structure** — competitions > matches > events, all stored as JSON
-• **Event types** — ~30 types per match, Pass and Carry make up ~60%
-• **Coordinate system** — 120x80 pitch, (0,0) is bottom-left
-• **Flattening** — one row per event, nested fields become columns
-• **Pass outcome** — null means successful, a value means it failed
-• **xG** — lives in `shot_statsbomb_xg` on Shot events
+• **Data structure**: competitions > matches > events, all stored as JSON
+• **Event types**: ~30 types per match, Pass and Carry make up ~60%
+• **Coordinate system**: 120x80 pitch, (0,0) is bottom-left
+• **Flattening**: one row per event, nested fields become columns
+• **Pass outcome**: null means successful, a value means it failed
+• **xG**: lives in `shot_statsbomb_xg` on Shot events
 
 Everything we build from here uses exactly this structure. Shot maps, pass networks, pressing analyses. Once you get it, the rest follows naturally.
 
@@ -364,7 +364,7 @@ In **Article 1.2** we take the `x` and `y` coordinates we just found and put the
 
 ---
 
-*Part of **Football Analytics with Python** — a series that takes you from raw Statsbomb data to real tactical analyses.*
+*Part of **Football Analytics with Python**, a series that takes you from raw Statsbomb data to real tactical analyses.*
 
 *Series: **1.1 The Data** · [1.2 Drawing a Pitch](../1-2-pitch/) · [1.3 Shot Maps](../1-3-shot-maps/) · [1.4 Pass Networks](../1-4-pass-networks/) · [1.5 Heatmaps](../1-5-heatmaps/)*
 

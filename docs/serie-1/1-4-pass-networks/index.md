@@ -2,7 +2,7 @@
 
 A pass network makes the structure of a team visible. You can see which players are central, which ones are isolated, and where the ball flows most often.
 
-In this article we build a pass network for Barcelona's 6-0 win over Athletic Club in La Liga 2015/16. The season of MSN — Messi, Suárez, Neymar. The network shows what made them so hard to stop.
+In this article we build a pass network for Barcelona's 6-0 win over Athletic Club in La Liga 2015/16. The season of MSN: Messi, Suárez, Neymar. The network shows what made them so hard to stop.
 
 ---
 
@@ -83,7 +83,7 @@ print(f'Completed first-half passes by {home_team}: {len(passes)}')
 
 ## Calculate Average Player Positions
 
-For each player, we calculate their average position from all their actions in the first half — not just passes, but any event with an (x, y) coordinate. This is more stable than using passes alone.
+For each player, we calculate their average position from all their actions in the first half, not just passes, but any event with an (x, y) coordinate. This is more stable than using passes alone.
 
 ```python
 touches = df[
@@ -127,7 +127,7 @@ Filtering at 3+ passes removes noise. Two isolated exchanges don't reveal struct
 
 ## Draw the Network
 
-Nodes are players placed at their average position. Edges are the pass connections — thicker lines mean more passes between that pair.
+Nodes are players placed at their average position. Edges are the pass connections: thicker lines mean more passes between that pair.
 
 ```python
 fig, ax = plt.subplots(figsize=(14, 9))
@@ -179,9 +179,9 @@ plt.show()
 
 Three things to look for:
 
-• **Node size** — bigger nodes mean more passes played. The player who touches the ball constantly is the biggest node. In most teams this is the central midfielder.
-• **Edge thickness** — thicker lines mean a stronger connection. The most frequent partnerships stand out immediately. In a 4-3-3, you'll usually see the strongest edges between the holding midfielder and the two center-backs.
-• **Position on the pitch** — where the node sits reflects the player's actual average position. Center-backs low and central, wingers wide and high, forwards pushed up. The formation becomes visible.
+• **Node size**: bigger nodes mean more passes played. The player who touches the ball constantly is the biggest node. In most teams this is the central midfielder.
+• **Edge thickness**: thicker lines mean a stronger connection. The most frequent partnerships stand out immediately. In a 4-3-3, you'll usually see the strongest edges between the holding midfielder and the two center-backs.
+• **Position on the pitch**: where the node sits reflects the player's actual average position. Center-backs low and central, wingers wide and high, forwards pushed up. The formation becomes visible.
 
 In Barcelona's 6-0 win, the network shows a dense spine through the center. Busquets sits deep as the connector. Messi drifts in from the right half-space. Neymar stays wide on the left but picks up the ball higher up the pitch.
 
@@ -218,13 +218,13 @@ Build both panels with the same draw code and put them side by side using `plt.s
 
 ## What's Next?
 
-Pass networks show connections between players. Heatmaps show zones of activity. In **Article 1.5** we aggregate all touch coordinates into density maps — where a team operates, where Messi spent his time across an entire season, and where Leverkusen pressed in the Bundesliga.
+Pass networks show connections between players. Heatmaps show zones of activity. In **Article 1.5** we aggregate all touch coordinates into density maps: where a team operates, where Messi spent his time across an entire season, and where Leverkusen pressed in the Bundesliga.
 
 [Article 1.5: Heatmaps](../1-5-heatmaps/)
 
 ---
 
-*Part of **Football Analytics with Python** — a series that takes you from raw Statsbomb data to real tactical analyses.*
+*Part of **Football Analytics with Python**, a series that takes you from raw Statsbomb data to real tactical analyses.*
 
 *Series: [1.1 The Data](../1-1-data/) · [1.2 Drawing a Pitch](../1-2-pitch/) · [1.3 Shot Maps](../1-3-shot-maps/) · **1.4 Pass Networks** · [1.5 Heatmaps](../1-5-heatmaps/)*
 

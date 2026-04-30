@@ -6,11 +6,11 @@ GPS data tells you how far a player ran. 360° freeze frames tell you how close 
 
 ## Two Datasets, One Question
 
-The preceding articles in this series used synthetic GPS data to describe physical outputs — distance, speed, accelerations. This article uses real Statsbomb 360° data from Bundesliga 2023/24 to quantify the spatial dimension of pressing.
+The preceding articles in this series used synthetic GPS data to describe physical outputs: distance, speed, accelerations. This article uses real Statsbomb 360° data from Bundesliga 2023/24 to quantify the spatial dimension of pressing.
 
 The core question: **when a player executes a pressing action, how close is the nearest opponent to the ball carrier?**
 
-A low distance means intense, close pressing. A higher distance means the player committed to press from further away — which may mean a poorly-timed press, or a pre-planned high-line trap.
+A low distance means intense, close pressing. A higher distance means the player committed to press from further away, which may mean a poorly-timed press or a pre-planned high-line trap.
 
 ---
 
@@ -52,7 +52,7 @@ The distribution shows the range of pressing distances across teams. Teams with 
 
 ![Pressing tightness ranking](figures/pressing_tightness_ranking.png)
 
-The median pressing distance by team creates a directional ranking of pressing intensity. Teams on the left press tighter. Teams on the right press looser — whether by design or because their pressing actions are less synchronized.
+The median pressing distance by team creates a directional ranking of pressing intensity. Teams on the left press tighter. Teams on the right press looser, whether by design or because their pressing actions are less synchronized.
 
 This is different from PPDA (covered in 2.2), which counts pressing frequency. A team could press very often but loosely (high PPDA, high median distance). A team that presses rarely but in well-organized traps would have low median distance despite moderate PPDA.
 
@@ -62,11 +62,11 @@ Both dimensions matter. The 360° data provides the one that conventional event 
 
 ## The Connection to Physical Data
 
-The physical metrics from P.2 through P.4 describe what a player can do — their speed profile, their distance capacity, their acceleration load. The 360° pressing data describes what a team does with those capabilities.
+The physical metrics from P.2 through P.4 describe what a player can do: their speed profile, their distance capacity, their acceleration load. The 360° pressing data describes what a team does with those capabilities.
 
 A team with high-acceleration fullbacks and wingers can execute tight, close-distance presses without leaving gaps, because they can close distances quickly and recover their shape rapidly. A team without that physical quality has to press from further away, committing to a press before they are in position.
 
-This is the bridge between physical performance analysis and tactical analysis — and why both fields need each other to answer the questions that matter.
+This is the bridge between physical performance analysis and tactical analysis, and why both fields need each other to answer the questions that matter.
 
 ---
 

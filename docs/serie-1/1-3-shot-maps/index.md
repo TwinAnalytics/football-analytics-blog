@@ -2,7 +2,7 @@
 
 A final score tells you what happened. A shot map tells you why.
 
-In this article we build a shot map for the 2020/21 El Clásico — Barcelona 1-3 Real Madrid. We plot every shot by location, weight each one by its xG value, and color it by outcome. By the end you have a visualization that explains the match better than the scoreline.
+In this article we build a shot map for the 2020/21 El Clásico: Barcelona 1-3 Real Madrid. We plot every shot by location, weight each one by its xG value, and color it by outcome. By the end you have a visualization that explains the match better than the scoreline.
 
 ---
 
@@ -64,9 +64,9 @@ Total shots: 24
 ```
 
 Each shot row has:
-• `x`, `y` — where on the pitch the shot was taken from
-• `shot_statsbomb_xg` — the expected goals value for that shot
-• `shot_outcome` — Goal, Saved, Blocked, Off T, or Wayward
+• `x`, `y`: where on the pitch the shot was taken from
+• `shot_statsbomb_xg`: the expected goals value for that shot
+• `shot_outcome`: Goal, Saved, Blocked, Off T, or Wayward
 
 ---
 
@@ -82,7 +82,7 @@ The model considers:
 • Body part used (foot vs. header)
 • How the chance was created (open play, corner, direct free kick)
 
-xG doesn't tell you whether a shot went in. It tells you how likely it was to. A goalkeeper making a great save doesn't change the xG of that shot. That's the point — it removes luck from the equation.
+xG doesn't tell you whether a shot went in. It tells you how likely it was to. A goalkeeper making a great save doesn't change the xG of that shot. That's the point: it removes luck from the equation.
 
 ---
 
@@ -110,7 +110,7 @@ plt.show()
 
 ![Raw shot locations](figures/shots_raw.png)
 
-You can see where both teams shot from. But all dots look the same — no information about quality or outcome.
+You can see where both teams shot from. But all dots look the same, with no information about quality or outcome.
 
 ---
 
@@ -148,9 +148,9 @@ Now you can read the match in one glance. Big open circles are dangerous chances
 
 ## Step 3: Side by Side, Normalized Direction
 
-The most useful format is two panels — one per team — with both attacking in the same direction. That way you're comparing like with like.
+The most useful format is two panels, one per team, with both attacking in the same direction. That way you're comparing like with like.
 
-To normalize: if a shot's x coordinate is below 60, the player was shooting at the left goal. We flip it — `x_new = 120 - x`, `y_new = 80 - y` — so it appears on the right half of the pitch.
+To normalize: if a shot's x coordinate is below 60, the player was shooting at the left goal. We flip it (`x_new = 120 - x`, `y_new = 80 - y`) so it appears on the right half of the pitch.
 
 ```python
 def normalize_direction(x, y):
@@ -198,10 +198,10 @@ plt.show()
 
 A few things to look for:
 
-• **Cluster near the 6-yard box** — a team creating chances from close range, where conversion rates are highest.
-• **Shots from wide angles** — speculative or forced efforts. Low xG even when close to goal.
-• **Big open circles** — dangerous chances that didn't go in. A team that "deserved more."
-• **Small filled circles** — goals from tight situations. Clinical finishing or good fortune.
+• **Cluster near the 6-yard box**: a team creating chances from close range, where conversion rates are highest.
+• **Shots from wide angles**: speculative or forced efforts. Low xG even when close to goal.
+• **Big open circles**: dangerous chances that didn't go in. A team that "deserved more."
+• **Small filled circles**: goals from tight situations. Clinical finishing or good fortune.
 
 In this El Clásico, Real Madrid's total xG was lower than Barcelona's. They scored three. Barcelona had the better individual chances but couldn't convert. The map shows that Real Madrid were clinical; the scoreline slightly flattered them based on the underlying quality of chances.
 
@@ -211,13 +211,13 @@ That gap between xG and actual goals is exactly what the next series article on 
 
 ## What's Next?
 
-We can see where shots come from. In **Article 1.4** we look at how the ball got there — who passed to whom, and what the team's passing structure looked like across the pitch.
+We can see where shots come from. In **Article 1.4** we look at how the ball got there: who passed to whom, and what the team's passing structure looked like across the pitch.
 
 [Article 1.4: Pass Networks](../1-4-pass-networks/)
 
 ---
 
-*Part of **Football Analytics with Python** — a series that takes you from raw Statsbomb data to real tactical analyses.*
+*Part of **Football Analytics with Python**, a series that takes you from raw Statsbomb data to real tactical analyses.*
 
 *Series: [1.1 The Data](../1-1-data/) · [1.2 Drawing a Pitch](../1-2-pitch/) · **1.3 Shot Maps** · [1.4 Pass Networks](../1-4-pass-networks/) · [1.5 Heatmaps](../1-5-heatmaps/)*
 

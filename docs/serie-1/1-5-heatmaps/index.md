@@ -1,6 +1,6 @@
 # Heatmaps: Where Does a Team or Player Actually Operate?
 
-A shot map shows individual events. A heatmap shows everything at once — the density of activity across the pitch, turning hundreds of separate touches into one continuous picture.
+A shot map shows individual events. A heatmap shows everything at once: the density of activity across the pitch, turning hundreds of separate touches into one continuous picture.
 
 In this article we build three heatmaps: a team touch map for one match, Messi's activity zone across the entire La Liga 2015/16 season, and a pressing map for Bayer Leverkusen from the Bundesliga 2023/24.
 
@@ -174,13 +174,13 @@ plt.show()
 
 ![Messi touch map La Liga 2015/16](figures/messi_touch_map.png)
 
-The map shows Messi's positional profile across the entire season. He spends most of his time in the right half-space — neither a pure winger nor a center-forward. He drops deep to receive, then drives toward goal. The concentration in the right channel and penalty area together tell you everything about his role in this team.
+The map shows Messi's positional profile across the entire season. He spends most of his time in the right half-space, neither a pure winger nor a center-forward. He drops deep to receive, then drives toward goal. The concentration in the right channel and penalty area together tell you everything about his role in this team.
 
 ---
 
 ## Part 3: Pressing Heatmap
 
-Pressure events tell you where a team applied defensive pressure — where they chased, pressed, and forced the opponent into mistakes. A pressing heatmap shows the team's defensive shape.
+Pressure events tell you where a team applied defensive pressure: where they chased, pressed, and forced the opponent into mistakes. A pressing heatmap shows the team's defensive shape.
 
 We use the Bayer Leverkusen match from Article 1.1: Bundesliga 2023/24, match 3895302.
 
@@ -219,7 +219,7 @@ plt.show()
 
 ![Leverkusen pressing heatmap](figures/pressing_heatmap.png)
 
-The pressing map reveals where Leverkusen apply pressure — and where they don't. If the heat concentrates in the opponent's half, it's a high-pressing team. If it's concentrated in their own half, they press deeper and invite the opponent forward before engaging.
+The pressing map reveals where Leverkusen apply pressure, and where they don't. If the heat concentrates in the opponent's half, it's a high-pressing team. If it's concentrated in their own half, they press deeper and invite the opponent forward before engaging.
 
 ---
 
@@ -264,11 +264,11 @@ In a 5-0 result, the pressing maps tell the dominance story. Leverkusen pressed 
 
 ## What We Covered
 
-• **2D histogram** — counts touches per grid cell. Simple and precise.
-• **KDE** — smooth density map. Better for shape, harder to read exact numbers.
-• **Single match** — shows one game's picture, which can be noisy.
-• **Season-wide** — aggregates across games for a stable positional profile.
-• **Pressing map** — shows defensive intensity zone by zone.
+• **2D histogram**: counts touches per grid cell. Simple and precise.
+• **KDE**: smooth density map. Better for shape, harder to read exact numbers.
+• **Single match**: shows one game's picture, which can be noisy.
+• **Season-wide**: aggregates across games for a stable positional profile.
+• **Pressing map**: shows defensive intensity zone by zone.
 
 Heatmaps are one of the most versatile tools in football analytics. They work for any event type with an (x, y) coordinate: passes, shots, carries, pressure, duels. Change the filter, keep the code.
 
@@ -276,13 +276,13 @@ Heatmaps are one of the most versatile tools in football analytics. They work fo
 
 ## What's Next?
 
-That's the end of Series 1. You can now load Statsbomb data, draw a pitch, build shot maps, pass networks, and heatmaps. The next series goes deeper into the tactics — starting with a proper breakdown of how xG models work and when to trust them.
+That's the end of Series 1. You can now load Statsbomb data, draw a pitch, build shot maps, pass networks, and heatmaps. The next series goes deeper into the tactics, starting with a proper breakdown of how xG models work and when to trust them.
 
 [Back to Series overview: Football Analytics with Python](../../)
 
 ---
 
-*Part of **Football Analytics with Python** — a series that takes you from raw Statsbomb data to real tactical analyses.*
+*Part of **Football Analytics with Python**, a series that takes you from raw Statsbomb data to real tactical analyses.*
 
 *Series: [1.1 The Data](../1-1-data/) · [1.2 Drawing a Pitch](../1-2-pitch/) · [1.3 Shot Maps](../1-3-shot-maps/) · [1.4 Pass Networks](../1-4-pass-networks/) · **1.5 Heatmaps***
 

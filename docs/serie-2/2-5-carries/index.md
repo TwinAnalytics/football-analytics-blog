@@ -1,6 +1,6 @@
 # 2.5 — Carry Data: How Teams Move the Ball Without Passing
 
-Passes and shots get the attention. But carries — sustained ball runs — are how teams bridge space between the zones where passes start and where attacks finish. The data shows who bridges the most, and where.
+Passes and shots get the attention. But carries, sustained ball runs, are how teams bridge space between the zones where passes start and where attacks finish. The data shows who bridges the most, and where.
 
 ---
 
@@ -26,7 +26,7 @@ Barcelona's progressive carries in La Liga 2015/16 show a clear pattern: most mo
 
 ![Top carriers](figures/top_carriers.png)
 
-Messi dominates the progressive carry ranking. This is not a surprise — his hallmark during this era was receiving the ball in midfield, carrying through pressure, and creating or finishing opportunities himself. The carry data makes his role explicit in a way that simpler statistics cannot.
+Messi dominates the progressive carry ranking. This is not a surprise: his hallmark during this era was receiving the ball in midfield, carrying through pressure, and creating or finishing opportunities himself. The carry data makes his role explicit in a way that simpler statistics cannot.
 
 Wide midfielders and fullbacks also feature prominently. Defensive players appear rarely, which reflects both tactical role and data reality: central defenders carry far less because they typically pass rather than run.
 
@@ -36,7 +36,7 @@ Wide midfielders and fullbacks also feature prominently. Defensive players appea
 
 ![Carry heatmap](figures/carry_heatmap.png)
 
-The heatmaps show where each team starts their carries. Barcelona's density is concentrated through the center and half-spaces, consistent with their positional play approach — control the center, create in the pockets. Real Madrid's pattern shows more wide concentration, consistent with their counter-attack and transition-based approach under Zidane.
+The heatmaps show where each team starts their carries. Barcelona's density is concentrated through the center and half-spaces, consistent with their positional play approach: control the center, create in the pockets. Real Madrid's pattern shows more wide concentration, consistent with their counter-attack and transition-based approach under Zidane.
 
 Neither is better by definition, but the maps make the tactical fingerprint visible.
 
@@ -64,7 +64,7 @@ Note that `carry_end_location` is stored as a string in the flattened DataFrame 
 
 Full notebook available in the [GitHub repository](https://github.com/TwinAnalytics/football-analytics-blog)
 
-*Data: Statsbomb Open Data — La Liga 2015/16, 380 matches.*
+*Data: Statsbomb Open Data, La Liga 2015/16, 380 matches.*
 
 ---
 

@@ -1,6 +1,6 @@
 # Football Analytics with Python
 
-Python-based football analytics — from raw Statsbomb event data to tactical analyses, physical performance metrics, and deep dives into the game's most interesting questions.
+Python-based football analytics, from raw Statsbomb event data to tactical analyses, physical performance metrics, and deep dives into the game's most interesting questions.
 
 ---
 
@@ -36,9 +36,9 @@ Messi's career in La Liga. Barcelona 2015/16. Women's World Cup 2019 vs. 2023. C
 
 ## Data
 
-**Statsbomb Open Data** — 3,464 matches, 75 seasons, event data + 360° tracking. Free and open for research and education.
+**Statsbomb Open Data**: 3,464 matches, 75 seasons, event data + 360° tracking. Free and open for research and education.
 
-**Synthetic GPS Dataset** — Physical performance data generated from peer-reviewed sports science benchmarks (Mohr et al. 2003, Bradley et al. 2009, Di Salvo et al. 2007).
+**Synthetic GPS Dataset**: Physical performance data generated from peer-reviewed sports science benchmarks (Mohr et al. 2003, Bradley et al. 2009, Di Salvo et al. 2007).
 
 ---
 

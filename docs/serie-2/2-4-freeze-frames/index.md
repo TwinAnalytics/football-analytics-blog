@@ -11,7 +11,7 @@ Each 360° freeze frame is a list of player objects. Every player has:
 - A flag indicating whether they are a teammate of the shooter
 - A position label (including goalkeeper)
 
-It does not capture every player on the pitch — the visible_area polygon defines what the tracking cameras could see. Players outside that zone are not in the frame.
+It does not capture every player on the pitch: the visible_area polygon defines what the tracking cameras could see. Players outside that zone are not in the frame.
 
 ---
 
@@ -31,7 +31,7 @@ The xG model accounts for position and technique, but not for the goalkeeper's e
 
 ![Defenders in front of shot](figures/defenders_in_front.png)
 
-Across all 360° shots in Bundesliga 2023/24, most shots have zero or one defender between the shooter and the goal. The tail of the distribution represents blocked or heavily contested situations — these are shots where even excellent placement would likely be stopped.
+Across all 360° shots in Bundesliga 2023/24, most shots have zero or one defender between the shooter and the goal. The tail of the distribution represents blocked or heavily contested situations: these are shots where even excellent placement would likely be stopped.
 
 This distribution has practical implications. It tells you that when a shot is blocked, it was genuinely an unusual situation (high defensive coverage), and when it goes through cleanly, the shooter had a real window.
 
@@ -56,7 +56,7 @@ for _, shot in shots.iterrows():
         is_teammate = player['teammate']
 ```
 
-The key is matching `event_id` from the events DataFrame to `event_uuid` in the freeze frame file. Not every event has a corresponding frame — only events that fell within the camera's visible area are included.
+The key is matching `event_id` from the events DataFrame to `event_uuid` in the freeze frame file. Not every event has a corresponding frame: only events that fell within the camera's visible area are included.
 
 ---
 
@@ -70,7 +70,7 @@ For more on 360° data in context, see [2.6 — 360° Data](../2-6-360/).
 
 Full notebook available in the [GitHub repository](https://github.com/TwinAnalytics/football-analytics-blog)
 
-*Data: Statsbomb Open Data — Bundesliga 2023/24, 34 matches with 360° tracking.*
+*Data: Statsbomb Open Data, Bundesliga 2023/24, 34 matches with 360° tracking.*
 
 ---
 

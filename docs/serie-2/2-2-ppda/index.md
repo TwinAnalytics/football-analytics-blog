@@ -20,7 +20,7 @@ Defensive actions include pressures, tackles, interceptions, and blocks executed
 
 ![PPDA ranking](figures/ppda_ranking.png)
 
-Teal bars are teams with below-median PPDA — pressing more intensely than average. Barcelona and Athletic Club sit near the top of pressing intensity. Athletic's press under Bielsa was already a reference point in European football. Barcelona's gegenpressing complemented their possession game with aggressive ball recovery.
+Teal bars are teams with below-median PPDA, pressing more intensely than average. Barcelona and Athletic Club sit near the top of pressing intensity. Athletic's press under Bielsa was already a reference point in European football. Barcelona's gegenpressing complemented their possession game with aggressive ball recovery.
 
 ---
 
@@ -28,7 +28,7 @@ Teal bars are teams with below-median PPDA — pressing more intensely than aver
 
 ![PPDA vs points](figures/ppda_vs_points.png)
 
-The trend slopes downward — teams with lower PPDA (more pressing) tend to accumulate more points. But the relationship is not clean. Several high-pressing teams had mediocre seasons, and several deeper-block teams performed well.
+The trend slopes downward: teams with lower PPDA (more pressing) tend to accumulate more points. But the relationship is not clean. Several high-pressing teams had mediocre seasons, and several deeper-block teams performed well.
 
 Pressing intensity and pressing quality are different things. PPDA measures how often you press, not how well-coordinated those actions are. A team can press frequently and chaotically. Another can press less often in well-organized traps. PPDA sees the former as the more intense presser.
 
@@ -68,7 +68,7 @@ PPDA does not weight pressing actions by outcome. A pressure that wins the ball 
 
 Full notebook available in the [GitHub repository](https://github.com/TwinAnalytics/football-analytics-blog)
 
-*Data: Statsbomb Open Data — La Liga 2015/16, 380 matches.*
+*Data: Statsbomb Open Data, La Liga 2015/16, 380 matches.*
 
 ---
 

@@ -6,7 +6,7 @@ A through ball splits a defensive line and puts an attacker through on goal in o
 
 ## What Statsbomb Records
 
-Each pass has a `pass_technique` field. A through ball gets the value `Through Ball` — distinct from a regular forward pass, it specifically describes a ball played into space behind the defensive line to release a runner.
+Each pass has a `pass_technique` field. A through ball gets the value `Through Ball`, distinct from a regular forward pass: it specifically describes a ball played into space behind the defensive line to release a runner.
 
 The dataset also records whether the pass was completed, whether it led to a shot, and whether it led to a goal.
 
@@ -18,7 +18,7 @@ The dataset also records whether the pass was completed, whether it led to a sho
 
 Across La Liga 2015/16, the overall pass completion rate is around 80%. Through balls complete at roughly half that rate.
 
-This is not a failure of execution. A through ball is designed to be played into space that the defense is actively closing. The risk is structural — baked into the pass type itself. The question is whether the reward justifies it.
+This is not a failure of execution. A through ball is designed to be played into space that the defense is actively closing. The risk is structural, baked into the pass type itself. The question is whether the reward justifies it.
 
 ---
 
@@ -57,7 +57,7 @@ through_balls['is_complete'] = through_balls['pass_outcome'].isna()
 
 Full notebook available in the [GitHub repository](https://github.com/TwinAnalytics/football-analytics-blog)
 
-*Data: Statsbomb Open Data — La Liga 2015/16, 380 matches.*
+*Data: Statsbomb Open Data, La Liga 2015/16, 380 matches.*
 
 ---
 
