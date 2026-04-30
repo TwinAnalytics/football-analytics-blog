@@ -1489,7 +1489,7 @@
 
 <h1 id="shot-maps-where-does-a-team-actually-shoot-from">Shot Maps: Where Does a Team Actually Shoot From?</h1>
 <p>A final score tells you what happened. A shot map tells you why.</p>
-<p>In this article we build a shot map for the 2020/21 El Clásico — Barcelona 1-3 Real Madrid. We plot every shot by location, weight each one by its xG value, and color it by outcome. By the end you have a visualization that explains the match better than the scoreline.</p>
+<p>In this article we build a shot map for the 2020/21 El Clásico: Barcelona 1-3 Real Madrid. We plot every shot by location, weight each one by its xG value, and color it by outcome. By the end you have a visualization that explains the match better than the scoreline.</p>
 <hr />
 <h2 id="setup">Setup</h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
@@ -1533,9 +1533,9 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Total shots: 24
 </code></pre></div>
 <p>Each shot row has:
-• <code>x</code>, <code>y</code> — where on the pitch the shot was taken from
-• <code>shot_statsbomb_xg</code> — the expected goals value for that shot
-• <code>shot_outcome</code> — Goal, Saved, Blocked, Off T, or Wayward</p>
+• <code>x</code>, <code>y</code>: where on the pitch the shot was taken from
+• <code>shot_statsbomb_xg</code>: the expected goals value for that shot
+• <code>shot_outcome</code>: Goal, Saved, Blocked, Off T, or Wayward</p>
 <hr />
 <h2 id="what-is-xg">What Is xG?</h2>
 <p>xG stands for expected goals. It's a number between 0 and 1 that tells you how likely a shot was to result in a goal, based on similar shots in historical data.</p>
@@ -1545,7 +1545,7 @@
 • Angle to goal
 • Body part used (foot vs. header)
 • How the chance was created (open play, corner, direct free kick)</p>
-<p>xG doesn't tell you whether a shot went in. It tells you how likely it was to. A goalkeeper making a great save doesn't change the xG of that shot. That's the point — it removes luck from the equation.</p>
+<p>xG doesn't tell you whether a shot went in. It tells you how likely it was to. A goalkeeper making a great save doesn't change the xG of that shot. That's the point: it removes luck from the equation.</p>
 <hr />
 <h2 id="step-1-raw-shot-locations">Step 1: Raw Shot Locations</h2>
 <p>Start simple. Every shot as a dot on the pitch.</p>
@@ -1566,7 +1566,7 @@
 <a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="Raw shot locations" src="figures/shots_raw.png" /></p>
-<p>You can see where both teams shot from. But all dots look the same — no information about quality or outcome.</p>
+<p>You can see where both teams shot from. But all dots look the same, with no information about quality or outcome.</p>
 <hr />
 <h2 id="step-2-add-xg-and-outcome">Step 2: Add xG and Outcome</h2>
 <p>Two visual layers:
@@ -1595,8 +1595,8 @@
 <p>Now you can read the match in one glance. Big open circles are dangerous chances that didn't go in. Small filled circles are goals from tight situations.</p>
 <hr />
 <h2 id="step-3-side-by-side-normalized-direction">Step 3: Side by Side, Normalized Direction</h2>
-<p>The most useful format is two panels — one per team — with both attacking in the same direction. That way you're comparing like with like.</p>
-<p>To normalize: if a shot's x coordinate is below 60, the player was shooting at the left goal. We flip it — <code>x_new = 120 - x</code>, <code>y_new = 80 - y</code> — so it appears on the right half of the pitch.</p>
+<p>The most useful format is two panels, one per team, with both attacking in the same direction. That way you're comparing like with like.</p>
+<p>To normalize: if a shot's x coordinate is below 60, the player was shooting at the left goal. We flip it (<code>x_new = 120 - x</code>, <code>y_new = 80 - y</code>) so it appears on the right half of the pitch.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">normalize_direction</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">:</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        <span class="k">return</span> <span class="mi">120</span> <span class="o">-</span> <span class="n">x</span><span class="p">,</span> <span class="mi">80</span> <span class="o">-</span> <span class="n">y</span>
@@ -1635,18 +1635,18 @@
 <hr />
 <h2 id="reading-the-map">Reading the Map</h2>
 <p>A few things to look for:</p>
-<p>• <strong>Cluster near the 6-yard box</strong> — a team creating chances from close range, where conversion rates are highest.
-• <strong>Shots from wide angles</strong> — speculative or forced efforts. Low xG even when close to goal.
-• <strong>Big open circles</strong> — dangerous chances that didn't go in. A team that "deserved more."
-• <strong>Small filled circles</strong> — goals from tight situations. Clinical finishing or good fortune.</p>
+<p>• <strong>Cluster near the 6-yard box</strong>: a team creating chances from close range, where conversion rates are highest.
+• <strong>Shots from wide angles</strong>: speculative or forced efforts. Low xG even when close to goal.
+• <strong>Big open circles</strong>: dangerous chances that didn't go in. A team that "deserved more."
+• <strong>Small filled circles</strong>: goals from tight situations. Clinical finishing or good fortune.</p>
 <p>In this El Clásico, Real Madrid's total xG was lower than Barcelona's. They scored three. Barcelona had the better individual chances but couldn't convert. The map shows that Real Madrid were clinical; the scoreline slightly flattered them based on the underlying quality of chances.</p>
 <p>That gap between xG and actual goals is exactly what the next series article on xG digs into properly.</p>
 <hr />
 <h2 id="whats-next">What's Next?</h2>
-<p>We can see where shots come from. In <strong>Article 1.4</strong> we look at how the ball got there — who passed to whom, and what the team's passing structure looked like across the pitch.</p>
+<p>We can see where shots come from. In <strong>Article 1.4</strong> we look at how the ball got there: who passed to whom, and what the team's passing structure looked like across the pitch.</p>
 <p><a href="../1-4-pass-networks/">Article 1.4: Pass Networks</a></p>
 <hr />
-<p><em>Part of </em><em>Football Analytics with Python</em><em> — a series that takes you from raw Statsbomb data to real tactical analyses.</em></p>
+<p><em>Part of </em><em>Football Analytics with Python</em><em>, a series that takes you from raw Statsbomb data to real tactical analyses.</em></p>
 <p><em>Series: <a href="../1-1-data/">1.1 The Data</a> · <a href="../1-2-pitch/">1.2 Drawing a Pitch</a> · </em><em>1.3 Shot Maps</em><em> · <a href="../1-4-pass-networks/">1.4 Pass Networks</a> · <a href="../1-5-heatmaps/">1.5 Heatmaps</a></em></p>
 <p><em>Data: <a href="https://github.com/statsbomb/open-data">Statsbomb Open Data</a> · Code: <a href="https://github.com/TwinAnalytics/football-analytics-blog">notebook.ipynb</a></em></p>
 

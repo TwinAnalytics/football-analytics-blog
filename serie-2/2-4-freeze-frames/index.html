@@ -1407,7 +1407,7 @@
 - A location (x, y coordinates)
 - A flag indicating whether they are a teammate of the shooter
 - A position label (including goalkeeper)</p>
-<p>It does not capture every player on the pitch — the visible_area polygon defines what the tracking cameras could see. Players outside that zone are not in the frame.</p>
+<p>It does not capture every player on the pitch: the visible_area polygon defines what the tracking cameras could see. Players outside that zone are not in the frame.</p>
 <hr />
 <h2 id="a-single-shot-visualized">A Single Shot Visualized</h2>
 <p><img alt="Freeze frame shot" src="figures/freeze_frame_shot.png" /></p>
@@ -1417,7 +1417,7 @@
 <hr />
 <h2 id="how-many-defenders-are-blocking-the-lane">How Many Defenders Are Blocking the Lane?</h2>
 <p><img alt="Defenders in front of shot" src="figures/defenders_in_front.png" /></p>
-<p>Across all 360° shots in Bundesliga 2023/24, most shots have zero or one defender between the shooter and the goal. The tail of the distribution represents blocked or heavily contested situations — these are shots where even excellent placement would likely be stopped.</p>
+<p>Across all 360° shots in Bundesliga 2023/24, most shots have zero or one defender between the shooter and the goal. The tail of the distribution represents blocked or heavily contested situations: these are shots where even excellent placement would likely be stopped.</p>
 <p>This distribution has practical implications. It tells you that when a shot is blocked, it was genuinely an unusual situation (high defensive coverage), and when it goes through cleanly, the shooter had a real window.</p>
 <hr />
 <h2 id="reading-the-data">Reading the Data</h2>
@@ -1436,14 +1436,14 @@
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="n">location</span> <span class="o">=</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;location&#39;</span><span class="p">]</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="n">is_teammate</span> <span class="o">=</span> <span class="n">player</span><span class="p">[</span><span class="s1">&#39;teammate&#39;</span><span class="p">]</span>
 </code></pre></div>
-<p>The key is matching <code>event_id</code> from the events DataFrame to <code>event_uuid</code> in the freeze frame file. Not every event has a corresponding frame — only events that fell within the camera's visible area are included.</p>
+<p>The key is matching <code>event_id</code> from the events DataFrame to <code>event_uuid</code> in the freeze frame file. Not every event has a corresponding frame: only events that fell within the camera's visible area are included.</p>
 <hr />
 <h2 id="why-this-matters">Why This Matters</h2>
 <p>Freeze frames transform shot analysis from "where was the shot from" to "what was the situation at the moment of the shot." Combined with xG, they let you evaluate whether a shot that went in was actually a good decision, or whether it required the goalkeeper to be poorly positioned.</p>
 <p>For more on 360° data in context, see <a href="../2-6-360/">2.6 — 360° Data</a>.</p>
 <hr />
 <p>Full notebook available in the <a href="https://github.com/TwinAnalytics/football-analytics-blog">GitHub repository</a></p>
-<p><em>Data: Statsbomb Open Data — Bundesliga 2023/24, 34 matches with 360° tracking.</em></p>
+<p><em>Data: Statsbomb Open Data, Bundesliga 2023/24, 34 matches with 360° tracking.</em></p>
 <hr />
 <p><strong>Series 2 — Tactical Analysis</strong></p>
 <p><a href="../2-3-through-balls/">← 2.3 Through Balls</a> · <a href="../2-5-carries/">2.5 Carries →</a></p>

@@ -1407,11 +1407,11 @@
 <p>A shot from six yards out, one-on-one with the goalkeeper, might have an xG of 0.65. A speculative effort from 30 yards might be 0.03. Add up all the xG values for a team over a match and you get their expected goals for that game.</p>
 <p>The Statsbomb xG model accounts for:</p>
 <ul>
-<li><strong>Location</strong> — distance and angle to goal</li>
-<li><strong>Body part</strong> — headed shots score less often than foot shots</li>
-<li><strong>Shot technique</strong> — volleys, chips, normal strikes</li>
-<li><strong>Game situation</strong> — open play, set piece, corner</li>
-<li><strong>Preceding action</strong> — was it a through ball? A cross?</li>
+<li><strong>Location</strong>: distance and angle to goal</li>
+<li><strong>Body part</strong>: headed shots score less often than foot shots</li>
+<li><strong>Shot technique</strong>: volleys, chips, normal strikes</li>
+<li><strong>Game situation</strong>: open play, set piece, corner</li>
+<li><strong>Preceding action</strong>: was it a through ball? A cross?</li>
 </ul>
 <hr />
 <h2 id="xg-over-a-season">xG Over a Season</h2>
@@ -1434,7 +1434,7 @@
 <p><strong>Single-match variance is high.</strong> A 0.6 xG shot misses 40% of the time. Over one game, variance dominates. Over a season, it smooths out.</p>
 <p><strong>Goalkeeper position is not in the model.</strong> A shot hit toward a keeper standing centrally has a different real conversion probability than the same shot when the keeper is off his line. Basic xG models treat them identically.</p>
 <p><strong>It measures shot quality, not decision quality.</strong> A player who creates a 0.9 xG chance and misses gets no credit for the underlying work. A player who fires 30-yard efforts all game accumulates almost no xG even if one goes in.</p>
-<p>The best use of xG is over large samples — full seasons, career trajectories. As a tool for understanding a single match result, treat it as context, not truth.</p>
+<p>The best use of xG is over large samples: full seasons, career trajectories. As a tool for understanding a single match result, treat it as context, not truth.</p>
 <hr />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
@@ -1449,7 +1449,7 @@
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">team_xg</span> <span class="o">=</span> <span class="n">shots_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;team&#39;</span><span class="p">)[</span><span class="s1">&#39;shot_statsbomb_xg&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </code></pre></div>
 <p>Full notebook available in the <a href="https://github.com/TwinAnalytics/football-analytics-blog">GitHub repository</a></p>
-<p><em>Data: Statsbomb Open Data — La Liga 2015/16, 380 matches.</em></p>
+<p><em>Data: Statsbomb Open Data, La Liga 2015/16, 380 matches.</em></p>
 <hr />
 <p><strong>Series 2 — Tactical Analysis</strong></p>
 <p><a href="../../serie-1/1-5-heatmaps/">← 1.5 Heatmaps</a> · <a href="../2-2-ppda/">2.2 Pressing →</a></p>

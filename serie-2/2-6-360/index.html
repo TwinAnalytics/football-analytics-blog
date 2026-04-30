@@ -1400,17 +1400,17 @@
 
 
 <h1 id="26-360-data-the-next-level-of-football-analysis">2.6 — 360° Data: The Next Level of Football Analysis</h1>
-<p>Classic event data tells you what happened. A pass was made. A shot was taken. A tackle was won. But it does not tell you who else was on the pitch and where. 360° data adds that layer — and it changes how much you can understand from a single moment in a match.</p>
+<p>Classic event data tells you what happened. A pass was made. A shot was taken. A tackle was won. But it does not tell you who else was on the pitch and where. 360° data adds that layer, and it changes how much you can understand from a single moment in a match.</p>
 <hr />
 <h2 id="what-360-data-is">What 360° Data Is</h2>
-<p>Statsbomb 360° data is collected for specific competitions: UEFA Euro 2020 and 2024, Women's World Cup 2023, Bundesliga 2023/24, and a handful of others. For these matches, every tracked event includes a freeze frame — a snapshot of player positions at that instant.</p>
+<p>Statsbomb 360° data is collected for specific competitions: UEFA Euro 2020 and 2024, Women's World Cup 2023, Bundesliga 2023/24, and a handful of others. For these matches, every tracked event includes a freeze frame: a snapshot of player positions at that instant.</p>
 <p>The data has two key components:</p>
 <p><strong>Freeze frame:</strong> A list of player locations, with flags indicating whether they are a teammate of the player who performed the event.</p>
-<p><strong>Visible area:</strong> A polygon describing which part of the pitch was within the camera's field of view. Players outside this polygon are not tracked — they simply are not in the data.</p>
+<p><strong>Visible area:</strong> A polygon describing which part of the pitch was within the camera's field of view. Players outside this polygon are not tracked; they simply are not in the data.</p>
 <hr />
 <h2 id="visualizing-a-frame">Visualizing a Frame</h2>
 <p><img alt="360 freeze frame" src="figures/360_freeze_frame.png" /></p>
-<p>The teal shaded polygon is the visible area — the region covered by the tracking cameras. Teal dots are attacking players. Purple are defenders. Yellow is the goalkeeper. The central dot is the player who performed the event.</p>
+<p>The teal shaded polygon is the visible area: the region covered by the tracking cameras. Teal dots are attacking players. Purple are defenders. Yellow is the goalkeeper. The central dot is the player who performed the event.</p>
 <p>The visible area constraint is important to understand. You are not seeing the full pitch. Players in dark zones outside the polygon were not captured. Analysis that assumes complete coverage will reach wrong conclusions.</p>
 <hr />
 <h2 id="pressing-in-360-space">Pressing in 360° Space</h2>
@@ -1439,7 +1439,7 @@
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">visible_area</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;visible_area&#39;</span><span class="p">,</span> <span class="p">[])</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="c1"># visible_area is a flat list [x0, y0, x1, y1, ...]</span>
 </code></pre></div>
-<p>The matching key is <code>event_id</code> from the events DataFrame against <code>event_uuid</code> in the 360° file. Note that not every event has a frame — only those within the visible area are included.</p>
+<p>The matching key is <code>event_id</code> from the events DataFrame against <code>event_uuid</code> in the 360° file. Note that not every event has a frame: only those within the visible area are included.</p>
 <hr />
 <h2 id="what-you-can-and-cannot-do">What You Can and Cannot Do</h2>
 <p><strong>You can:</strong>
@@ -1451,10 +1451,10 @@
 - See players outside the visible area
 - Reconstruct the full tactical shape from a single frame</p>
 <p>360° data is a complement to event data, not a replacement. The two together give you a much fuller picture than either alone.</p>
-<p>For full positional tracking data — player positions at 25 frames per second across the entire pitch — you would need proprietary provider feeds, which are not publicly available.</p>
+<p>For full positional tracking data, player positions at 25 frames per second across the entire pitch, you would need proprietary provider feeds, which are not publicly available.</p>
 <hr />
 <p>Full notebook available in the <a href="https://github.com/TwinAnalytics/football-analytics-blog">GitHub repository</a></p>
-<p><em>Data: Statsbomb Open Data — Bundesliga 2023/24, 34 matches with 360° tracking.</em></p>
+<p><em>Data: Statsbomb Open Data, Bundesliga 2023/24, 34 matches with 360° tracking.</em></p>
 <hr />
 <p><strong>Series 2 — Tactical Analysis</strong></p>
 <p><a href="../2-5-carries/">← 2.5 Carries</a> · <a href="../../serie-3/p1-gps-intro/">P.1 GPS Introduction →</a></p>

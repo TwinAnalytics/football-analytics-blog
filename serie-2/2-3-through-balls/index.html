@@ -1403,13 +1403,13 @@
 <p>A through ball splits a defensive line and puts an attacker through on goal in one action. The completion rate is far below any other pass type. But when it works, nothing is more dangerous.</p>
 <hr />
 <h2 id="what-statsbomb-records">What Statsbomb Records</h2>
-<p>Each pass has a <code>pass_technique</code> field. A through ball gets the value <code>Through Ball</code> — distinct from a regular forward pass, it specifically describes a ball played into space behind the defensive line to release a runner.</p>
+<p>Each pass has a <code>pass_technique</code> field. A through ball gets the value <code>Through Ball</code>, distinct from a regular forward pass: it specifically describes a ball played into space behind the defensive line to release a runner.</p>
 <p>The dataset also records whether the pass was completed, whether it led to a shot, and whether it led to a goal.</p>
 <hr />
 <h2 id="completion-rates-the-inherent-risk">Completion Rates: The Inherent Risk</h2>
 <p><img alt="Completion rate comparison" src="figures/through_ball_completion.png" /></p>
 <p>Across La Liga 2015/16, the overall pass completion rate is around 80%. Through balls complete at roughly half that rate.</p>
-<p>This is not a failure of execution. A through ball is designed to be played into space that the defense is actively closing. The risk is structural — baked into the pass type itself. The question is whether the reward justifies it.</p>
+<p>This is not a failure of execution. A through ball is designed to be played into space that the defense is actively closing. The risk is structural, baked into the pass type itself. The question is whether the reward justifies it.</p>
 <hr />
 <h2 id="where-they-come-from">Where They Come From</h2>
 <p><img alt="Through ball origin heatmap" src="figures/through_ball_origins.png" /></p>
@@ -1432,7 +1432,7 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">through_balls</span><span class="p">[</span><span class="s1">&#39;is_complete&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">through_balls</span><span class="p">[</span><span class="s1">&#39;pass_outcome&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span>
 </code></pre></div>
 <p>Full notebook available in the <a href="https://github.com/TwinAnalytics/football-analytics-blog">GitHub repository</a></p>
-<p><em>Data: Statsbomb Open Data — La Liga 2015/16, 380 matches.</em></p>
+<p><em>Data: Statsbomb Open Data, La Liga 2015/16, 380 matches.</em></p>
 <hr />
 <p><strong>Series 2 — Tactical Analysis</strong></p>
 <p><a href="../2-2-ppda/">← 2.2 Pressing</a> · <a href="../2-4-freeze-frames/">2.4 Freeze Frames →</a></p>

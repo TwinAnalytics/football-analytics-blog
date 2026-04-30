@@ -1488,7 +1488,7 @@
 
 
 <h1 id="heatmaps-where-does-a-team-or-player-actually-operate">Heatmaps: Where Does a Team or Player Actually Operate?</h1>
-<p>A shot map shows individual events. A heatmap shows everything at once — the density of activity across the pitch, turning hundreds of separate touches into one continuous picture.</p>
+<p>A shot map shows individual events. A heatmap shows everything at once: the density of activity across the pitch, turning hundreds of separate touches into one continuous picture.</p>
 <p>In this article we build three heatmaps: a team touch map for one match, Messi's activity zone across the entire La Liga 2015/16 season, and a pressing map for Bayer Leverkusen from the Bundesliga 2023/24.</p>
 <hr />
 <h2 id="setup">Setup</h2>
@@ -1619,10 +1619,10 @@
 <a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="Messi touch map La Liga 2015/16" src="figures/messi_touch_map.png" /></p>
-<p>The map shows Messi's positional profile across the entire season. He spends most of his time in the right half-space — neither a pure winger nor a center-forward. He drops deep to receive, then drives toward goal. The concentration in the right channel and penalty area together tell you everything about his role in this team.</p>
+<p>The map shows Messi's positional profile across the entire season. He spends most of his time in the right half-space, neither a pure winger nor a center-forward. He drops deep to receive, then drives toward goal. The concentration in the right channel and penalty area together tell you everything about his role in this team.</p>
 <hr />
 <h2 id="part-3-pressing-heatmap">Part 3: Pressing Heatmap</h2>
-<p>Pressure events tell you where a team applied defensive pressure — where they chased, pressed, and forced the opponent into mistakes. A pressing heatmap shows the team's defensive shape.</p>
+<p>Pressure events tell you where a team applied defensive pressure: where they chased, pressed, and forced the opponent into mistakes. A pressing heatmap shows the team's defensive shape.</p>
 <p>We use the Bayer Leverkusen match from Article 1.1: Bundesliga 2023/24, match 3895302.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">MATCH_ID_LEV</span> <span class="o">=</span> <span class="mi">3895302</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
@@ -1654,7 +1654,7 @@
 <a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="Leverkusen pressing heatmap" src="figures/pressing_heatmap.png" /></p>
-<p>The pressing map reveals where Leverkusen apply pressure — and where they don't. If the heat concentrates in the opponent's half, it's a high-pressing team. If it's concentrated in their own half, they press deeper and invite the opponent forward before engaging.</p>
+<p>The pressing map reveals where Leverkusen apply pressure, and where they don't. If the heat concentrates in the opponent's half, it's a high-pressing team. If it's concentrated in their own half, they press deeper and invite the opponent forward before engaging.</p>
 <hr />
 <h2 id="side-by-side-two-teams-two-styles">Side by Side: Two Teams, Two Styles</h2>
 <p>The most useful version compares both teams' pressing in the same match.</p>
@@ -1690,18 +1690,18 @@
 <p>In a 5-0 result, the pressing maps tell the dominance story. Leverkusen pressed higher up the pitch. Werder pressed desperately late in the game, deep in their own half.</p>
 <hr />
 <h2 id="what-we-covered">What We Covered</h2>
-<p>• <strong>2D histogram</strong> — counts touches per grid cell. Simple and precise.
-• <strong>KDE</strong> — smooth density map. Better for shape, harder to read exact numbers.
-• <strong>Single match</strong> — shows one game's picture, which can be noisy.
-• <strong>Season-wide</strong> — aggregates across games for a stable positional profile.
-• <strong>Pressing map</strong> — shows defensive intensity zone by zone.</p>
+<p>• <strong>2D histogram</strong>: counts touches per grid cell. Simple and precise.
+• <strong>KDE</strong>: smooth density map. Better for shape, harder to read exact numbers.
+• <strong>Single match</strong>: shows one game's picture, which can be noisy.
+• <strong>Season-wide</strong>: aggregates across games for a stable positional profile.
+• <strong>Pressing map</strong>: shows defensive intensity zone by zone.</p>
 <p>Heatmaps are one of the most versatile tools in football analytics. They work for any event type with an (x, y) coordinate: passes, shots, carries, pressure, duels. Change the filter, keep the code.</p>
 <hr />
 <h2 id="whats-next">What's Next?</h2>
-<p>That's the end of Series 1. You can now load Statsbomb data, draw a pitch, build shot maps, pass networks, and heatmaps. The next series goes deeper into the tactics — starting with a proper breakdown of how xG models work and when to trust them.</p>
+<p>That's the end of Series 1. You can now load Statsbomb data, draw a pitch, build shot maps, pass networks, and heatmaps. The next series goes deeper into the tactics, starting with a proper breakdown of how xG models work and when to trust them.</p>
 <p><a href="../../">Back to Series overview: Football Analytics with Python</a></p>
 <hr />
-<p><em>Part of </em><em>Football Analytics with Python</em><em> — a series that takes you from raw Statsbomb data to real tactical analyses.</em></p>
+<p><em>Part of </em><em>Football Analytics with Python</em><em>, a series that takes you from raw Statsbomb data to real tactical analyses.</em></p>
 <p><em>Series: <a href="../1-1-data/">1.1 The Data</a> · <a href="../1-2-pitch/">1.2 Drawing a Pitch</a> · <a href="../1-3-shot-maps/">1.3 Shot Maps</a> · <a href="../1-4-pass-networks/">1.4 Pass Networks</a> · </em><em>1.5 Heatmaps</em>**</p>
 <p><em>Data: <a href="https://github.com/statsbomb/open-data">Statsbomb Open Data</a> · Code: <a href="https://github.com/TwinAnalytics/football-analytics-blog">notebook.ipynb</a></em></p>
 

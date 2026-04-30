@@ -1525,7 +1525,7 @@
 <p>Every professional player in the top leagues wears a GPS vest during training and matches. The device records their position several times per second. After 90 minutes, you have a detailed physical profile of everything that player did on the pitch.</p>
 <p>But the raw GPS trace is not the output. What coaches and analysts actually use are derived metrics: distance covered, speed zones, sprint counts, accelerations. This article explains what each metric measures, why it matters, and where the numbers typically land for different positions.</p>
 <blockquote>
-<p><strong>Note on data:</strong> This series uses a synthetic dataset generated from published benchmarks in sports science research. The parameters — distance ranges, speed zone distributions, position profiles — are derived from three peer-reviewed papers: Mohr et al. (2003), Bradley et al. (2009), and Di Salvo et al. (2007). The distributions match what you would see in real professional tracking data, but the individual player records are simulated. Real GPS data is proprietary and not publicly available.</p>
+<p><strong>Note on data:</strong> This series uses a synthetic dataset generated from published benchmarks in sports science research. The parameters, distance ranges, speed zone distributions, position profiles, are derived from three peer-reviewed papers: Mohr et al. (2003), Bradley et al. (2009), and Di Salvo et al. (2007). The distributions match what you would see in real professional tracking data, but the individual player records are simulated. Real GPS data is proprietary and not publicly available.</p>
 <p><em>"Synthetic dataset. Parameters derived from Mohr et al. (2003), Bradley et al. (2009), and Di Salvo et al. (2007). Values are illustrative and should not be cited as empirical measurements."</em></p>
 </blockquote>
 <hr />
@@ -1551,7 +1551,7 @@
 <hr />
 <h2 id="the-metrics-one-by-one">The Metrics, One by One</h2>
 <h3 id="total-distance">Total Distance</h3>
-<p>The simplest metric: how many meters a player covered in the match. It includes everything — walking, jogging, running, sprinting.</p>
+<p>The simplest metric: how many meters a player covered in the match. It includes everything: walking, jogging, running, sprinting.</p>
 <p>The average outfield player covers 10,000–12,500 meters per game. Goalkeepers cover 5,000–7,000 meters.</p>
 <p>Total distance alone is a poor performance indicator. A center-back covering 11km in a deep block is doing something completely different from a central midfielder covering 11km pressing high. The distance is the same. The physical and tactical demands are not.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">starters</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;minutes_played&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">]</span>
@@ -1598,20 +1598,20 @@
 </tbody>
 </table>
 <p>In this dataset:
-• <code>running_distance</code> — Zone 3 (14–19.8 km/h)
-• <code>hsr_distance</code> — Zone 4 (19.8–25.2 km/h)
-• <code>sprinting_distance</code> — Zone 5 (&gt; 25.2 km/h)
-• <code>hi_distance</code> — High Intensity: Zones 4+5 combined</p>
+• <code>running_distance</code>: Zone 3 (14–19.8 km/h)
+• <code>hsr_distance</code>: Zone 4 (19.8–25.2 km/h)
+• <code>sprinting_distance</code>: Zone 5 (&gt; 25.2 km/h)
+• <code>hi_distance</code>: High Intensity, Zones 4+5 combined</p>
 <p>The higher the zone, the more demanding the effort. A player covering 300m at sprint speed is working much harder than a player covering 300m at jogging pace. This is why coaches care more about HSR and sprint distance than total distance.</p>
 <h3 id="max-speed">Max Speed</h3>
 <p>The single fastest speed recorded during the match. Measured in km/h.</p>
 <p>Elite defenders typically hit 31–34 km/h. Forwards and wingers often reach 34–36 km/h. The world record for a match sprint is around 37 km/h (Kyle Walker, 2023).</p>
-<p>Max speed tells you the player's physical ceiling. It's also used for injury risk assessment — a player who suddenly runs significantly below their usual max speed might be carrying a knock.</p>
+<p>Max speed tells you the player's physical ceiling. It's also used for injury risk assessment: a player who suddenly runs significantly below their usual max speed might be carrying a knock.</p>
 <h3 id="accelerations-and-decelerations">Accelerations and Decelerations</h3>
 <p>Accelerations are counted above a threshold (typically 2.5–3 m/s²). The dataset splits them into medium and high intensity.</p>
 <p>Why do accelerations matter more than top speed for fitness load?</p>
-<p>Accelerating and decelerating is metabolically expensive. A player who sprints 20m from standing and stops hard uses significantly more energy than a player who maintains a constant high speed for 20m. This is why a center-forward who makes sharp runs into the box — even if they don't cover huge distances — can be one of the most physically loaded players on the pitch.</p>
-<p>Count high acceleration correlates strongly with what sports scientists call "neuromuscular load" — the stress placed on muscles, tendons, and the nervous system. This is the metric most associated with injury risk.</p>
+<p>Accelerating and decelerating is metabolically expensive. A player who sprints 20m from standing and stops hard uses significantly more energy than a player who maintains a constant high speed for 20m. This is why a center-forward who makes sharp runs into the box (even if they don't cover huge distances) can be one of the most physically loaded players on the pitch.</p>
+<p>Count high acceleration correlates strongly with what sports scientists call "neuromuscular load": the stress placed on muscles, tendons, and the nervous system. This is the metric most associated with injury risk.</p>
 <hr />
 <h2 id="position-profiles">Position Profiles</h2>
 <p>Let me visualize the metrics by position using only players who played at least 80 minutes (to get comparable full-game values).</p>
@@ -1650,10 +1650,10 @@
 </code></pre></div>
 <p><img alt="Physical profiles by position" src="figures/position_profiles.png" /></p>
 <p>A few patterns stand out immediately:</p>
-<p>• <strong>Central midfielders cover the most total distance</strong> — they are the engine of the team. They press, drop, run channels, and cover defensive transitions more than anyone else.
-• <strong>Strikers and wide midfielders sprint most</strong> — forwards make shorter, sharper bursts into space. Their total distance is lower but their sprint distance is among the highest.
-• <strong>Goalkeepers are outliers on everything</strong> — comparing a goalkeeper's numbers to outfield players is meaningless.
-• <strong>Full backs are physically the most complete</strong> — they cover high total distance AND have significant sprint distance, reflecting their role covering ground both defensively and in attack.</p>
+<p>• <strong>Central midfielders cover the most total distance</strong>: they are the engine of the team. They press, drop, run channels, and cover defensive transitions more than anyone else.
+• <strong>Strikers and wide midfielders sprint most</strong>: forwards make shorter, sharper bursts into space. Their total distance is lower but their sprint distance is among the highest.
+• <strong>Goalkeepers are outliers on everything</strong>: comparing their numbers to outfield players is meaningless.
+• <strong>Full backs are physically the most complete</strong>: they cover high total distance AND have significant sprint distance, reflecting their role covering ground both defensively and in attack.</p>
 <hr />
 <h2 id="distribution-of-total-distance">Distribution of Total Distance</h2>
 <p>Not every player covers the same distance. Let's look at the spread.</p>
@@ -1674,10 +1674,10 @@
 <a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="Distance distribution by position" src="figures/distance_distribution.png" /></p>
-<p>The distributions overlap heavily. A high-performing center-back and a lower-intensity central midfielder can cover the same total distance. This overlap is why you always need to look at multiple metrics together — and why context (position, formation, result, opponent) matters for interpreting any single number.</p>
+<p>The distributions overlap heavily. A high-performing center-back and a lower-intensity central midfielder can cover the same total distance. This overlap is why you always need to look at multiple metrics together, and why context (position, formation, result, opponent) matters for interpreting any single number.</p>
 <hr />
 <h2 id="the-mmin-metric">The M/min Metric</h2>
-<p><code>mmin</code> — meters per minute — normalizes distance by playing time. It's the most useful metric for comparing players who played different amounts of time: a 90-minute starter vs. a 25-minute substitute.</p>
+<p><code>mmin</code> (meters per minute) normalizes distance by playing time. It's the most useful metric for comparing players who played different amounts of time: a 90-minute starter vs. a 25-minute substitute.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">starters_and_subs</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;minutes_played&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">20</span><span class="p">]</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">by_pos</span> <span class="o">=</span> <span class="n">starters_and_subs</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;position&#39;</span><span class="p">)[</span><span class="s1">&#39;mmin&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">pos_order</span><span class="p">)</span>
@@ -1695,13 +1695,13 @@
 <a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <p><img alt="Meters per minute by position" src="figures/mmin_by_position.png" /></p>
-<p>Substitutes tend to have higher m/min values than starters — they come on fresh for 20–30 minutes when the game is still open. This makes m/min useful for comparing intensity, but you should always note the minutes played context.</p>
+<p>Substitutes tend to have higher m/min values than starters, coming on fresh for 20–30 minutes when the game is still open. This makes m/min useful for comparing intensity, but you should always note the minutes played context.</p>
 <hr />
 <h2 id="whats-next">What's Next?</h2>
-<p>We know what the metrics mean and how they differ by position. In <strong>Article P.2</strong> we go deeper into sprinting — who runs fastest, what a sprint profile looks like across a match, and what max speed tells us about player type.</p>
+<p>We know what the metrics mean and how they differ by position. In <strong>Article P.2</strong> we go deeper into sprinting: who runs fastest, what a sprint profile looks like across a match, and what max speed tells us about player type.</p>
 <p><a href="../p2-sprints/">Article P.2: Sprint Profiles</a></p>
 <hr />
-<p><em>Part of </em><em>Physical Performance Analytics</em><em> — a series on GPS tracking data in professional football.</em></p>
+<p><em>Part of </em><em>Physical Performance Analytics</em><em>, a series on GPS tracking data in professional football.</em></p>
 <p><em>Series: </em><em>P.1 GPS Introduction</em><em> · <a href="../p2-sprints/">P.2 Sprint Profiles</a> · <a href="../p3-distance/">P.3 Distance Analysis</a> · <a href="../p4-accelerations/">P.4 Acceleration Load</a> · <a href="../p5-pressing-space/">P.5 Pressing Space</a></em></p>
 <p><em>Data: Synthetic dataset based on published sports science benchmarks · Code: <a href="https://github.com/TwinAnalytics/football-analytics-blog">notebook.ipynb</a></em></p>
 <hr />
