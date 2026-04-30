@@ -165,7 +165,7 @@ pitch.kdeplot(
     ax=ax, cmap='YlOrRd', levels=30, fill=True, alpha=0.85
 )
 
-ax.set_title("Lionel Messi — La Liga 2015/16\nTouch Density (all 38 matches)",
+ax.set_title("Lionel Messi — La Liga 2015/16\nTouch Density",
              fontweight='bold', fontsize=14, color='white', pad=12)
 plt.tight_layout()
 plt.savefig('figures/messi_touch_map.png', dpi=150, bbox_inches='tight')
